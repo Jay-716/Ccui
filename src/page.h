@@ -13,7 +13,7 @@
 
 struct page; 
 
-int page_create(int, char *, struct page *);
+int page_create(int, char *, struct page *, struct page *);
 int page_delete(struct page *);
 int page_chname(struct page *, char * name);
 

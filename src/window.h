@@ -13,7 +13,7 @@
 
 struct window;
 
-int window_create(int, char *, struct window *);
+int window_create(int, char *, struct window *, struct window *);
 int window_delete(struct window *);
 
 #endif
