@@ -7,22 +7,9 @@
  */
 
 #include <stdlib.h>
-#include <time.h>
 
 #include "page.h"
 #include "window.h"
-
-struct page
-{
-		int id;
-		char * name;
-		time_t create_time;
-		struct window * window_head;/*The first node of window linked list*/
-
-		/*Here are some linked list variables*/
-		struct page * prev;
-		struct page * next;
-};
 
 int page_create(int page_id, char * page_name, struct page * prev_page, struct page * new_page)
 {
@@ -68,5 +55,11 @@ int page_delete(struct page * del_page)
 
 		free(del_page);
 
+		return 0;
+}
+
+int page_chname(struct page * ch_page, char * new_name)
+{
+		ch_page -> name = new_name;
 		return 0;
 }
